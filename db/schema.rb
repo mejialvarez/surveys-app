@@ -16,9 +16,8 @@ ActiveRecord::Schema.define(version: 2020_09_26_025309) do
   enable_extension "plpgsql"
 
   create_table "questions", force: :cascade do |t|
-    t.string "type"
-    t.string "title"
-    t.json "data"
+    t.string "title", null: false
+    t.json "data", null: false
     t.bigint "survey_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -1,0 +1,5 @@
+<% if object.errors.full_messages.any? %>
+  <% object.errors.full_messages.each do |error_message| %>
+    <div class="notification is-danger %> is-light"><%= error_message.html_safe %></div>
+  <% end %>
+<% end %>

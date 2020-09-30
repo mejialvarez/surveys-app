@@ -1,0 +1,3 @@
+<%= render "shared/form_errors.html.erb", object: @survey %>
+<survey-form :token="<%= form_authenticity_token.to_json %>" :action="<%= surveys_path.to_json %>">
+</survey-form>
