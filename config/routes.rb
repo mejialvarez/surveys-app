@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'surveys#index'
 
-  resources :surveys
+  resources :surveys do
+    post 'complete', on: :member
+  end
 end

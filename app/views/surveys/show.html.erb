@@ -1,0 +1,19 @@
+<%= form_tag complete_survey_path do %>
+  <h1 class="title"><%= @survey.title.humanize %></h1>
+  <% @questions.each do |question| %>
+    <div class="message">
+      <div class="message-body">
+        <h2 class="subtitle"><%= question.title.humanize %></h2>
+        <% question.answer_options.each do |answer_option| %>
+          <div class="control">
+            <%= label_tag "" do %>
+              <%= radio_button_tag "questions[#{question.id}][answer]", answer_option, class: 'radio' %>
+              <%= answer_option %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <%= submit_tag("Send") %>
+<% end %>
