@@ -1,4 +1,4 @@
-<%= link_to 'View surveys', surveys_path, class: 'is-pulled-right' %>
+<%= link_to 'View surveys', surveys_path %>
 <h1 class="title">New survey</h1>
 <%= render "shared/form_errors.html.erb", object: @survey %>
 <survey-form :token="<%= form_authenticity_token.to_json %>" :action="<%= surveys_path.to_json %>">

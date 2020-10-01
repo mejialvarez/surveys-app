@@ -1,4 +1,5 @@
 class SurveysController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
   def index
     @surveys = Survey.all
   end
