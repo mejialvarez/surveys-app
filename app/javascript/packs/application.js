@@ -12,6 +12,7 @@ import Vue from 'vue/dist/vue.esm';
 import surveyForm from '../components/surveyForm.vue';
 import questionField from '../components/questionField.vue';
 import answerOption from '../components/answerOption.vue';
+import pieChart from '../components/pieChart.vue';
 
 Vue.use(Vuelidate)
 Vue.use(TurbolinksAdapter)
@@ -19,6 +20,7 @@ Vue.use(TurbolinksAdapter)
 Vue.component('survey-form', surveyForm);
 Vue.component('question-field', questionField);
 Vue.component('answer-option', answerOption);
+Vue.component('pie-chart', pieChart);
 
 document.addEventListener('turbolinks:load', () => {
  const app = new Vue({

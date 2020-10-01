@@ -1,5 +1,6 @@
 <%= form_tag complete_survey_path do %>
   <h1 class="title"><%= @survey.title.humanize %></h1>
+
   <% @questions.each do |question| %>
     <div class="message">
       <div class="message-body">
@@ -15,5 +16,5 @@
       </div>
     </div>
   <% end %>
-  <%= submit_tag("Send") %>
+  <%= submit_tag "Send", class: 'button is-success is-small is-fullwidth' %>
 <% end %>

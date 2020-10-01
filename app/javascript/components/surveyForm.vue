@@ -24,11 +24,11 @@
     </div>
 
     <div class="question-fields-box">
-      <button v-on:click="addQuestion" class="button is-small">Add question</button>
+      <button v-on:click="addQuestion" class="button is-small mb-3">Add question</button>
       <question-field v-for="(question, index) in questions" :key="index" :index="index" />
     </div>
 
-    <input type="submit" name="commit" value="Create" class="button is-success is-small is-pulled-right">
+    <input type="submit" name="commit" value="Create" class="button is-success is-small is-fullwidth mt-5">
   </form>
 </template>
 

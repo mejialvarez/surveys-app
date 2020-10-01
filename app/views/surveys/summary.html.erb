@@ -1,0 +1,12 @@
+<%= link_to 'View surveys', surveys_path, class: 'is-pulled-right' %>
+
+<h1 class="title">Survey: <%= @survey.title %></h1>
+
+<% @metrics.each_with_index do |question_metric, index| %>
+  <div class="box">
+    <h2 class="title is-4"><%= index+1 %>. <%= question_metric[:question_title].humanize %></h2>
+    <div class="question-piechart">
+      <pie-chart :labels="<%= question_metric[:answers].keys.to_json %>" :data="<%= question_metric[:answers].values.to_json %>" :width="300" :height="300"></pie-chart>
+    </div>
+  </div>
+<% end %>

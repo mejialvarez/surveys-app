@@ -31,6 +31,15 @@ class SurveysController < ApplicationController
     redirect_to survey, notice: 'The survey was sent!'
   end
 
+  def summary
+    @survey = Survey.find(params[:id])
+    questions = @survey.questions
+    @metrics = []
+    questions.each do |question|
+      @metrics << { question_title: question.title, answers: Answer.totalByQuestion(question) }
+    end
+  end
+
   private
 
   def survey_params

@@ -1,7 +1,24 @@
-<%= link_to 'New survey', new_survey_path %>
+<%= link_to 'New survey', new_survey_path, class: 'is-pulled-right' %>
+<h1 class="title">Surveys</h1>
 
-<ul>
-  <% @surveys.each do |survey| %>
-    <li><%= link_to survey.title, survey %></li>
-  <% end %>
-</ul>
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @surveys.each_with_index do |survey, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= survey.title %></td>
+        <td>
+          <%= link_to 'View', survey %>
+          <%= link_to 'Summary', summary_survey_path(survey) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :surveys do
     post 'complete', on: :member
+    get 'summary', on: :member
   end
 end
