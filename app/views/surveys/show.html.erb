@@ -1,3 +1,7 @@
+<% if signed_in? %>
+  <%= link_to 'View surveys', surveys_path %>
+<% end %>
+
 <%= form_tag complete_survey_path do %>
   <h1 class="title"><%= @survey.title.humanize %></h1>
 
