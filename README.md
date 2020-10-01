@@ -35,3 +35,9 @@ You can seed the database running:
 $ rails db:seed
 ```
 This command will create one binary tree. Check the file [seeds.rb](db/seeds.rb) for more information.
+
+To run app:
+
+```
+$ foreman start -f Procfile.dev
+```
