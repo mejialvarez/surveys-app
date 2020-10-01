@@ -1,24 +1,37 @@
 # README
+This is an WEB APP that uses Ruby on Rails 6 and PostgreSQL as the database.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
 
-Things you may want to cover:
+In order to install and run the project locally you need to have the following installed:
 
-* Ruby version
+* [Ruby 2.7.1](https://www.ruby-lang.org/es/downloads/)
+* [PostgreSQL](https://www.postgresql.org/)
 
-* System dependencies
+## Setup
 
-* Configuration
+Download the project by cloning it from Git:
 
-* Database creation
+```
+$ git clone git@github.com:mejialvarez/surveys-app.git
+```
 
-* Database initialization
+Install the dependencies with:
 
-* How to run the test suite
+```
+$ bundle
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Create the database and run the migrations by executing:
 
-* Deployment instructions
+```
+$ rails db:create
+$ rails db:migrate
+```
 
-* ...
+You can seed the database running:
+
+```
+$ rails db:seed
+```
+This command will create one binary tree. Check the file [seeds.rb](db/seeds.rb) for more information.
